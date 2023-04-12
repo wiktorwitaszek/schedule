@@ -42,17 +42,29 @@ Czas Harmonogram::sum()
 
 
 Czas& Harmonogram::operator[](int n) {
+	Czas temp = NULL;
+	if (n > number || n < 0)
+	{
+		return temp;
+	}
 	return tab[n];
 }
 
 const Czas& Harmonogram::operator[](int n) const {
+	Czas temp = NULL;
+	if (n > number || n < 0)
+	{
+		return temp;
+	}
 	return tab[n];
 }
 
 Harmonogram::Harmonogram(const Harmonogram& _inny) {
 	number = _inny.number; 
 	tab = new Czas[number]; 
-	tab = _inny.tab; 
+	for (int i = 0; i < number; i++) {
+		tab[i] = _inny.tab[i];
+	}
 }
 
 int Harmonogram::GetNumber() {

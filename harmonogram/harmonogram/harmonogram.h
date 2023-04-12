@@ -14,6 +14,7 @@ class Harmonogram
 public:
 
 	Harmonogram(int = 0);
+	~Harmonogram() {delete[] tab;}
 	void add(Czas&);
 	void show();
 	Czas sum();

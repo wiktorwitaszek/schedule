@@ -13,6 +13,7 @@ Harmonogram copybynumber(const Harmonogram& _copy)
         cin >> h;
         if (h > _copy.number|| h<1) cout << "Podano z³¹ liczbê!" << endl;
     } while (_copy.number < h || h < 1);
+    temp.number = h;
     temp.tab = new Czas[h];
     for (int i = 0; i < h; i++)
     {
@@ -37,6 +38,7 @@ Harmonogram copybytime(Harmonogram& _copy)
         p++;
     }
     if (p == 0) cout << "Nie skopiowano, ¿adnego czasu :(" << endl;
+    temp.number = p;
     suma = _copy[i];
     temp.tab = new Czas[p];
     while(suma<temp1 && i < _copy.number)

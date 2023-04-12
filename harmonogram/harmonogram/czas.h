@@ -17,9 +17,9 @@ public:
 
 	Czas(int = 0, int = 0, int = 0);
 
-	Czas operator+(Czas&);
-	Czas operator+=(int);
-	Czas operator+=(Czas&);
+	Czas& operator+(Czas&);
+	Czas& operator+=(int);
+	Czas& operator+=(Czas&);
 	bool operator==(Czas&);
 	bool operator!=(Czas&);
 	bool operator<(Czas&);

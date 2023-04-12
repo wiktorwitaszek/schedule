@@ -42,7 +42,7 @@ Czas::Czas(int s, int m, int h)
 	hour = h;
 }
 
-Czas Czas::operator+(Czas& c)
+Czas& Czas::operator+(Czas& c)
 {
 	Czas temp = c;
 	temp.hour += hour;
@@ -52,7 +52,7 @@ Czas Czas::operator+(Czas& c)
 	return temp;
 }
 
-Czas Czas::operator+=(int s)
+Czas& Czas::operator+=(int s)
 {
 	sec += s;
 	while (sec >= 60)
@@ -70,7 +70,7 @@ Czas Czas::operator+=(int s)
 	return *this;
 }
 
-Czas Czas::operator+=(Czas& c)
+Czas& Czas::operator+=(Czas& c)
 {
 	sec += c.sec;
 	min += c.min;
